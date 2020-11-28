@@ -1,0 +1,21 @@
+$space: 24px;
+
+.app {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-button-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -#{$space};
+  align-items: stretch;
+}
+
+.image-button {
+  width: 100%;
+  height: 200px;
+  flex: 0 1 calc(25% - #{$space});
+  margin-left: $space;
+}

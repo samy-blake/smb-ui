@@ -1,0 +1,42 @@
+
+@keyframes loadingBackgroundColor {
+  @for $i from 0 through 50 {
+    #{$i * 1%} {
+      background: linear-gradient(
+        to right,
+        rgb(56, 56, 56),
+        rgb(0, 0, 0) ($i * 2%),
+        rgb(56, 56, 56)
+      );
+    } 
+  }
+
+
+  @for $i from 51 through 100 {
+    #{$i * 1%} {
+      background: linear-gradient(
+        to right,
+        rgb(56, 56, 56),
+        rgb(0, 0, 0)  (100 - ($i * 2% - 100)),
+        rgb(56, 56, 56)
+      );
+    } 
+  }
+}
+
+ngx-smb-ui-content {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
+
+  @import "./style/list",
+          "./style/container";
+  
+
+  &.load-finish {
+    
+    @import "./style/list.finish";
+  }
+}

@@ -1,0 +1,11 @@
+<button 
+  type="button"
+  (click)="onButtonClick()"
+  [style.background-image]="safeImage || ''"
+  >
+  <div class="content-wrapper">
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</button>

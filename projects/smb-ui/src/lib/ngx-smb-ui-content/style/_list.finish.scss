@@ -1,0 +1,8 @@
+ol, ul {
+  li {
+    &::after,
+    &::before {
+      max-width: 0%;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+$border-height: 5px;
+
+[ngx-smb-ui-link] {
+  color: inherit;
+  position: relative;
+  padding-bottom: $border-height;
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
+  padding: .5em;
+  display: inline-block;
+
+  transition-delay: 100ms;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    max-height: $border-height;
+    width: 100%;
+    background-color: black;
+    transition: max-height 150ms ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: white;
+
+    &::after {
+      max-height: 100%;
+    }
+  }
+}

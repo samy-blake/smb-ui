@@ -1,0 +1,36 @@
+ul,
+ol {
+
+  li {
+    position: relative;
+    z-index: 10;
+
+    &::after,
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: max-width 500ms cubic-bezier(1, 0, 1, 1);
+      z-index: 15;
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &::before {
+      animation: loadingBackgroundColor 1s infinite;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(0.99,-0.01, 0, 0.96);
+    }
+
+    &::after {
+      z-index: 14;
+      transition-delay: 300ms;
+      background-color: white;
+      // opacity: .5;
+      // transition-timing-function: cubic-bezier(0.27, 1.63, 0.54,-0.77);
+    }
+  }
+}
